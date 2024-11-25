@@ -1,11 +1,13 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 
+MAX_LENGTH = 63
+
 
 class Musician(models.Model):
-    first_name = models.CharField(max_length=63)
-    last_name = models.CharField(max_length=63)
-    instrument = models.CharField(max_length=63)
+    first_name = models.CharField(max_length=MAX_LENGTH)
+    last_name = models.CharField(max_length=MAX_LENGTH)
+    instrument = models.CharField(max_length=MAX_LENGTH)
     age = models.IntegerField()
     date_of_applying = models.DateField(auto_now_add=True)
 
