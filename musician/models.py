@@ -19,5 +19,9 @@ class Musician(models.Model):
         if self.age < 14:
             raise ValidationError("Musicians must be at least 14 years old.")
 
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        super().save(*args, **kwargs)
+
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}"
