@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    #3-rd apps:
+    #  3-rd apps:
     "rest_framework",
-    #user apps:
+    #  user apps:
     "musician"
 ]
 
